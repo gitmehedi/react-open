@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import faker from 'faker';
+import CommentDetail from './CommentDetail';
 
 
 // Create a react component
@@ -14,10 +16,10 @@ const App = () => {
     const style = { backgroundColor: 'blue', color: 'white' }
 
     return (
-        <div>
-            <label className="label" htmlFor="name">Enter Name</label>
-            <input type="text" id="name" />
-            <button style={style}> {buttonClickMe()} {buttonText.text} </button>
+        <div className="ui container comments">
+            <CommentDetail author="Sam" timeAgo="Today at 4:00 PM"/>
+            <CommentDetail author="Alex" timeAgo="Yesterday at 5:00 PM"/>
+            <CommentDetail author="Jane" timeAgo="Today at 9:00 PM"/>
         </div>
     );
 };
